@@ -24,6 +24,10 @@ body {
     border-bottom: 1px solid rgb(107, 106, 106);
 }
 
+.logo {
+    width: 70px;
+}
+
 .navbar-center {
     width: 100%;
     max-width: 1170px;
