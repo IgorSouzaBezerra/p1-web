@@ -22,7 +22,7 @@
                 <i class="fas fa-bars"></i>
             </span>
             <img class="logo" src="image/logo.png" alt="store logo" />
-            <div class="cart-btn">
+            <div class="cart-btn" onclick="mostrarCarrinho()">
                 <span class="nav-icon">
                     <i class="fas fa-shopping-cart"></i>
                 </span>
@@ -33,10 +33,37 @@
 
     <header class="banner-main">
         <div class="banner">
-            <h1 class="banner-title">HTML, CSS e JavaScript</h1>
-            <button class="banner-btn">Experimente gratis</button>
+            <h1 class="banner-title">Biblioteca Online</h1>
+            <button class="banner-btn">Compre seu livro favorito</button>
         </div>
     </header>
+
+    <section class="products">
+        <div class="section-title">
+            <h2>Os mais pedidos</h2>
+        </div>
+        <div class="products-center">
+            <!-- single products -->
+        </div>
+    </section>
+
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart" onclick="esconderCarrinho()">
+                <i class="fas fa-window-close"></i>
+            </span>
+            <h2>Seu carrinho</h2>
+            <div class="cart-content">
+                <div class="cart-item">
+                    
+                </div>
+                <div class="cart-footer">
+                    <h3>Valor total: $ <span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

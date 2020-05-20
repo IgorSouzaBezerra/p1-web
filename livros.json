@@ -1,0 +1,46 @@
+{
+    "items": [
+      {
+        "id": "1",
+        "title": "Eleanor & Park, de Rainbow Rowell",
+        "price": 10.99,
+        "image": "imagemLivros/livro1.jpg"
+      },
+      {
+        "id": "2",
+        "title": "Quem é você, Alasca?, de John Green",
+        "price": 10.99,
+        "image": "imagemLivros/livro2.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Americanah, de Chimamanda Ngozi Adichie",
+        "price": 10.99,
+        "image": "imagemLivros/livro3.jpg"
+      },
+      {
+        "id": "4",
+        "title": "As Vantagens de Ser Invisível, de Stephen Chbosky",
+        "price": 10.99,
+        "image": "imagemLivros/livro4.jpg"
+      },
+      {
+        "id": "5",
+        "title": "A Arte de Produzir Efeito sem Causa, de Lourenço Mutarelli",
+        "price": 10.99,
+        "image": "imagemLivros/livro5.jpg"
+      },
+      {
+        "id": "6",
+        "title": "Dias Perfeitos, de Raphael Montes",
+        "price": 10.99,
+        "image": "imagemLivros/livro6.jpg"
+      },
+      {
+        "id": "7",
+        "title": "O Mundo De Sofia , de Jostein Gaarder",
+        "price": 10.99,
+        "image": "imagemLivros/livro7.jpg"
+      }
+    ]
+  }
