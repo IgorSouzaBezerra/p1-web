@@ -93,10 +93,14 @@ const frontend = new Frontend();
 const livros = livraria.getLivros().then(livros => {
     ArrayLivros = livros;
     memoria.salvarLivros(ArrayLivros);
-    memoria.salvarLivrosCarrinho(ArrayCarrinho);
     frontend.exibirLivros(livros);
 });
 
+let carrinho = JSON.parse(localStorage.getItem('livrosCarrinho'));
+if(carrinho) {
+    ArrayCarrinho = carrinho;
+}
+memoria.salvarLivrosCarrinho(ArrayCarrinho);
 let livrosNoCarrinho = livraria.getCarrinho();
 frontend.exibirLivrosCarrinho(livrosNoCarrinho);
 frontend.exibirQtd(livrosNoCarrinho);
@@ -106,7 +110,10 @@ frontend.exibirQtd(livrosNoCarrinho);
 function addCarrinho(id) {
     ArrayLivros.map(livro => {
         if(livro.id == id) {
-            ArrayCarrinho.push(livro);
+            let existeLivro = ArrayCarrinho.find(livro => livro.id == id);
+            if(!existeLivro){
+                ArrayCarrinho.push(livro);
+            }
         }
     });
 
