@@ -31,6 +31,7 @@ class Storage {
     }
 
     salvarLivroCarrinho() {
+        
         localStorage.setItem('livrosCarrinho', JSON.stringify(ArrayCarrinho));
     }
 }
