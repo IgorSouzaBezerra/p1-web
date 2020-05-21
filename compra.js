@@ -105,8 +105,6 @@ let livrosNoCarrinho = livraria.getCarrinho();
 frontend.exibirLivrosCarrinho(livrosNoCarrinho);
 frontend.exibirQtd(livrosNoCarrinho);
 
-
-
 function addCarrinho(id) {
     ArrayLivros.map(livro => {
         if(livro.id == id) {
