@@ -288,6 +288,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .devs .devs-col {
@@ -315,6 +316,7 @@ body {
 
 .devs .description .dev-avatar {
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 3px solid #d8d8d8;
 }
