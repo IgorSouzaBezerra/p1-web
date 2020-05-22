@@ -150,5 +150,7 @@ function limparCarrinho() {
     ArrayCarrinho = [];
     frontend.exibirLivrosCarrinho(ArrayCarrinho);
     frontend.exibirValorTotal(ArrayCarrinho);
+    frontend.exibirQtd(ArrayCarrinho);
+    esconderCarrinho();
 }
 
