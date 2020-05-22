@@ -19,7 +19,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    background: rgb(231, 226, 221);
+    background: rgb(204, 201, 198);
     z-index: 1;
     border-bottom: 1px solid rgb(107, 106, 106);
 }
@@ -195,6 +195,7 @@ body {
     z-index: 2;
     visibility: hidden;
 }
+
 .cart {
     position: fixed;
     top: 0;
@@ -208,12 +209,15 @@ body {
     transition: all 0.3s linear;
     transform: translateX(100%);
 }
+
 .showCart {
     transform: translateX(0);
 }
+
 .transparentBcg {
     visibility: visible;
 }
+
 @media screen and (min-width: 768px) {
     .cart {
         width: 30vw;
@@ -225,12 +229,14 @@ body {
     font-size: 1.7rem;
     cursor: pointer;
 }
+
 .cart h2 {
     text-transform: capitalize;
     text-align: center;
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
 }
+
 /*---------- carrinho Item -------------------- */
 .cart-item {
     display: grid;
@@ -273,4 +279,49 @@ body {
 .cart-footer h3 {
     text-transform: capitalize;
     margin-bottom: 1rem;
+}
+
+/* devs */
+
+.devs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devs .devs-col {
+    display: grid;
+    gap: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 980px) {
+    .devs .devs-col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+.devs .title h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    margin-bottom: 50px;
+}
+
+.devs .description .dev-avatar {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #d8d8d8;
+}
+
+.devs .description .dados {
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(95, 95, 95);
+    font-style: italic
 }
