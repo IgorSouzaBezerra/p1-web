@@ -32,12 +32,16 @@ class Memoria {
     salvarLivrosCarrinho(livros) {
         localStorage.setItem('livrosCarrinho', JSON.stringify(livros));
     }
+
+    limparCarrinho() {
+        localStorage.setItem('livrosCarrinho', []);
+    }
 }
 
 class Frontend {
     exibirLivros(livros) {
         let html = '';
-        livros.forEach(livro => {
+        livros.map(livro => {
             html += `
             <article class="product">
                 <div class="img-container">
@@ -57,7 +61,7 @@ class Frontend {
 
     exibirLivrosCarrinho(livros) {
         let html = '';
-        livros.forEach(livro => {
+        livros.map(livro => {
             html += `
             <div class="cart-item">
                 <img src=${livro.image} alt="product">
@@ -97,6 +101,7 @@ const livros = livraria.getLivros().then(livros => {
 });
 
 let carrinho = JSON.parse(localStorage.getItem('livrosCarrinho'));
+
 if(carrinho) {
     ArrayCarrinho = carrinho;
 }
@@ -138,5 +143,12 @@ function esconderCarrinho() {
 
     carrinho.style.visibility = "hidden";
     carrinho2.style.transform = "translateX(100%)";
+}
+
+function limparCarrinho() {
+    memoria.limparCarrinho();
+    ArrayCarrinho = [];
+    frontend.exibirLivrosCarrinho(ArrayCarrinho);
+    frontend.exibirValorTotal(ArrayCarrinho);
 }
 
