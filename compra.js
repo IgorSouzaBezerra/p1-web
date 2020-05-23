@@ -109,6 +109,7 @@ memoria.salvarLivrosCarrinho(ArrayCarrinho);
 let livrosNoCarrinho = livraria.getCarrinho();
 frontend.exibirLivrosCarrinho(livrosNoCarrinho);
 frontend.exibirQtd(livrosNoCarrinho);
+frontend.exibirValorTotal(livrosNoCarrinho);
 
 function addCarrinho(id) {
     ArrayLivros.map(livro => {
