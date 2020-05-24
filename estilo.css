@@ -327,3 +327,13 @@ body {
     color: rgb(95, 95, 95);
     font-style: italic
 }
+
+.link-git {
+    margin-top: 10px;
+}
+
+.link-git a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #313131;
+}
