@@ -13,7 +13,7 @@ class Livros {
             let dados = await resultado.json();
             let livros = dados.items;
             return livros;
-        }catch(err) {
+        } catch (err) {
             alert('Erro ao carregar Livros...');
         }
     }
@@ -52,7 +52,9 @@ class Frontend {
                     </button>
                 </div>
                 <h3>${livro.title}</h3>
-                <h4>${livro.price}</h4>
+                <h4>${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                    .format(livro.price)}
+                </h4>
             </article>
             `
         });
@@ -67,10 +69,13 @@ class Frontend {
                 <img src=${livro.image} alt="product">
                 <div>
                     <h4>${livro.title}</h4>
-                    <h5>$ ${livro.price}</h5>
+                    <h5>${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                    .format(livro.price)}
+                    </h5>
                 </div>
             </div>            
             `
+
         });
         livrosCarrinhoFront.innerHTML = html;
     }
@@ -79,13 +84,15 @@ class Frontend {
         qtd.innerHTML = array.length;
     }
 
-    exibirValorTotal(array) {
+    exibirValorTotal(array) { //TODO: Reduce
         let valorTotal = 0;
         array.map(livro => {
             valorTotal += livro.price;
         });
 
-        totalValor.innerHTML = valorTotal;
+        totalValor.innerHTML =
+            Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                .format(valorTotal);
     }
 }
 
@@ -102,7 +109,7 @@ const livros = livraria.getLivros().then(livros => {
 
 let carrinho = JSON.parse(localStorage.getItem('livrosCarrinho'));
 
-if(carrinho) {
+if (carrinho) {
     ArrayCarrinho = carrinho;
 }
 memoria.salvarLivrosCarrinho(ArrayCarrinho);
@@ -113,9 +120,9 @@ frontend.exibirValorTotal(livrosNoCarrinho);
 
 function addCarrinho(id) {
     ArrayLivros.map(livro => {
-        if(livro.id == id) {
+        if (livro.id == id) {
             let existeLivro = ArrayCarrinho.find(livro => livro.id == id);
-            if(!existeLivro){
+            if (!existeLivro) {
                 ArrayCarrinho.push(livro);
             }
         }
@@ -126,7 +133,7 @@ function addCarrinho(id) {
     frontend.exibirLivrosCarrinho(ArrayCarrinho);
     frontend.exibirValorTotal(ArrayCarrinho);
     mostrarCarrinho();
-    
+
 }
 
 
