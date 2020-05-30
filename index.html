@@ -19,11 +19,17 @@
 <body>
 
     <nav class="navbar">
+        <div class="navbar-left">
+
+        </div>
+
         <div class="navbar-center">
-            <span class="nav-icon">
-                <i class="fas fa-bars"></i>
-            </span>
-            <img class="logo" src="images/logo.png" alt="store logo" />
+            <a href="#header">
+                <img class="logo" src="images/logo.png" alt="store logo" />
+            </a>
+
+            <h3>Biblioteca</h3>
+
             <div class="cart-btn" onclick="mostrarCarrinho()">
                 <span class="nav-icon">
                     <i class="fas fa-shopping-cart"></i>
@@ -33,14 +39,14 @@
         </div>
     </nav>
 
-    <header class="banner-main">
+    <header id="header" class="banner-main">
         <div class="banner">
-            <h1 class="banner-title">Biblioteca de Livros</h1>
-            <button class="banner-btn">Compre seu livro favorito</button>
+            <h1 class="banner-title">Biblioteca</h1>
+            <a href="#products" class="button">Compre seu livro favorito</a>
         </div>
     </header>
 
-    <section class="products">
+    <section id="products" class="products">
         <div class="section-title">
             <h2>Os mais pedidos</h2>
         </div>
@@ -60,7 +66,7 @@
             </div>
             <div class="cart-footer">
                 <h3>Valor total: <span class="cart-total">0</span></h3>
-                <button onclick="limparCarrinho()" class="clear-cart banner-btn">limpar carrinho</button>
+                <button onclick="limparCarrinho()" class="button">limpar carrinho</button>
             </div>
         </div>
     </div>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #222;
     background: #fff;
@@ -21,7 +25,9 @@ body {
     align-items: center;
     background: rgb(204, 201, 198);
     z-index: 1;
-    border-bottom: 1px solid rgb(107, 106, 106);
+    -webkit-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.38);
+    box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.38);
 }
 
 .logo {
@@ -30,8 +36,8 @@ body {
 
 .navbar-center {
     width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
+    max-width: 1170px; 
+     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,21 +86,22 @@ body {
     margin-bottom: 3rem;
 }
 
-.banner-btn {
+.button {
     padding: 1rem 3rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 1rem;
     background: #9899ec;
     color: #fff;
-    border: 1px solid #7173ec;
     transition: all 0.3s linear;
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
+    text-decoration: none;
+    border: none;
 }
 
-.banner-btn:hover {
+.button:hover {
     background: transparent;
     color: #fff;
     background-color: #5b5dfa;
@@ -104,7 +111,8 @@ body {
 /* produtos */
 
 .products {
-    padding: 4rem 0;
+    padding: 6rem 0;
+    margin-top: 10px;
 }
   
 .section-title h2 {
